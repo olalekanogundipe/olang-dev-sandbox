@@ -1,4 +1,4 @@
-# O-Lang Resilience Test & Capability Harness
+﻿# O-Lang Resilience Test & Capability Harness
 
 A stress-test harness for the [`@o-lang/olang`](https://www.npmjs.com/package/@o-lang/olang) kernel. 
 O-Lang is not just a workflow engine; it is a **deterministic semantic governance protocol** that enforces policy, ensures auditability, and prevents unsafe data propagation at the execution layer.
@@ -269,3 +269,12 @@ The kernel derives the public key from the private key if the public file is abs
 ## 📜 License
 
 MIT
+
+
+##  Terminology Note for Traditional Agent Developers
+If you are coming from frameworks like LangChain or OpenAI function calling, you might be looking for "Tools". 
+In O-Lang, **Resolvers = Tools**. 
+
+However, we use the term "Resolver" to emphasize a critical architectural difference:
+- **Traditional Tool:** The LLM directly calls a function. The model has execution authority.
+- **O-Lang Resolver:** The LLM proposes an *intent* (a symbol). The O-Lang Kernel intercepts it, checks the **resolver allowlist**, validates the state, and *then* resolves the execution. The kernel holds the execution authority, not the model.
