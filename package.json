@@ -1,0 +1,16 @@
+{
+  "name": "o-lang-resilience-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/run-test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@o-lang/olang": "^1.5.1"
+  }
+}
